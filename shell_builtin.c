@@ -9,7 +9,7 @@
 void (*check_for_builtins(vars_t *vars))(vars_t *vars)
 {
 	unsigned int s;
-builtins_t check[] = {
+	builtins_t check[] = {
 		{"exit", new_exit},
 		{"env", _env},
 		{"setenv", new_setenv},
@@ -42,7 +42,7 @@ void new_exit(vars_t *vars)
 		status = _atoi(vars->av[1]);
 		if (status == -1)
 		{
-vars->status = 2;
+			vars->status = 2;
 			print_error(vars, ": illegal numbers: ");
 			_puts2(vars->av[1]);
 			_puts2("\n");
@@ -66,7 +66,8 @@ vars->status = 2;
  * Return: void
  */
 void _env(vars_t *vars)
-unsigned int s;
+{
+	unsigned int s;
 
 	for (s = 0; vars->env[s]; s++)
 	{
@@ -157,4 +158,3 @@ void new_unsetenv(vars_t *vars)
 	vars->env = newenv;
 	vars->status = 0;
 }
-
