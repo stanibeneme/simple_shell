@@ -1,5 +1,3 @@
-error_handler.c
-
 #include "shell.h"
 
 /**

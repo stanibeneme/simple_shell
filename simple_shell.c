@@ -1,5 +1,8 @@
 #include "shell.h"
 
+/* the global variable for ^C handling */
+unsigned int sig_flag;
+
 /**
  * sig_handler - it handles the ^C signal interupt
  * @uuv: the unused variable
