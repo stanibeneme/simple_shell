@@ -24,13 +24,13 @@
  */
 typedef struct variables
 {
-	int status;
 	char **av;
-	char **env;
 	char *buffer;
-	char **argv;
-	char **commands;
+	char **env;
 	size_t count;
+	char **argv;
+	int status;
+	char **commands;
 } vars_t;
 
 /**
